@@ -1,0 +1,13 @@
+dbt_bch_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-gcp-project-id
+      dataset: bch_staging
+      threads: 4
+      timeout_seconds: 300
+      location: EU
+      keyfile: /path/to/your/service-account-key.json
+      priority: interactive
