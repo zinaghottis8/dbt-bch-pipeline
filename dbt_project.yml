@@ -19,8 +19,6 @@ clean-targets:
 models:
   dbt_bch_pipeline:
     staging:
-      +materialized: table
       +schema: bch_staging
     marts:
-      +materialized: table
       +schema: bch_mart

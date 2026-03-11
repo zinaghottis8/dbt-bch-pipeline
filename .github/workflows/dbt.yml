@@ -47,7 +47,7 @@ jobs:
                 dataset: bch_staging
                 threads: 4
                 timeout_seconds: 300
-                location: EU
+                location: US
                 keyfile: /tmp/gcp-key.json
                 priority: interactive
           EOF
@@ -56,4 +56,4 @@ jobs:
         run: dbt debug --profiles-dir .
 
       - name: Run dbt build
-        run: dbt build --profiles-dir .
+        run: dbt run --profiles-dir .
